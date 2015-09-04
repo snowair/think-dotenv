@@ -1,0 +1,18 @@
+{
+  "name": "snowair/think-dotenv",
+  "description": "ThinkPHP3.2集成php-dotenv",
+  "minimum-stability": "dev",
+  "license": "apache",
+  "authors": [
+    {
+      "name": "朱亚杰",
+      "email": "xcoolcc@gmail.com"
+    }
+  ],
+  "require": {
+    "josegonzalez/dotenv": "^1.0"
+  },
+  "autoload": {
+    "files":[ "DotEnvBehavior.php","DotArrayFilter.php" ]
+  }
+}
