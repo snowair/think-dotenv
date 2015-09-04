@@ -27,7 +27,7 @@ composer require snowair/think-dotenv:dev-master
 ```
 return array(
     'app_begin'=>array(
-        'Snowair\Think\Behavior\DotEnv'
+        'Snowair\Dotenv\DotEnv',
     ),
 );
 ```

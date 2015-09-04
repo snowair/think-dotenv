@@ -20,7 +20,9 @@ class DotEnv {
             $Loader = new Loader($env_file);
             $env = $Loader
                 ->setFilters(['Snowair\Dotenv\DotArrayFilter'])
-                ->parse()->toArray();
+                ->parse()
+                ->filter()
+                ->toArray();
             C($env);
         };
     }

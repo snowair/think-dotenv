@@ -13,8 +13,8 @@
     "josegonzalez/dotenv": "^1.0"
   },
   "autoload": {
-    "psr-0": {
-      "Snowair\\Dotenv": ["."]
+    "psr-4": {
+      "Snowair\\Dotenv\\": "."
     }
   }
 }
