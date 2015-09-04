@@ -5,10 +5,10 @@
  * Time: 14:30
  */
 
-namespace Snowair\Think\Behavior;
+namespace Snowair\Dotenv;
 
 
-use josegonzalez\Dotenv\Loader;
+use Snowair\Dotenv\Loader;
 
 class DotEnv {
 
@@ -19,7 +19,7 @@ class DotEnv {
         if (file_exists($env_file)) {
             $Loader = new Loader($env_file);
             $env = $Loader
-                ->setFilters(['Snowair\Think\Dotenv\Filter\DotArray'])
+                ->setFilters(['Snowair\Dotenv\DotArrayFilter'])
                 ->parse()->toArray();
             C($env);
         };

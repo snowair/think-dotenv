@@ -13,6 +13,8 @@
     "josegonzalez/dotenv": "^1.0"
   },
   "autoload": {
-    "files":[ "DotEnv.php","DotArrayFilter.php" ]
+    "psr-0": {
+      "Snowair\\Dotenv": ["."]
+    }
   }
 }

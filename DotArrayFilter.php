@@ -1,8 +1,8 @@
 <?php
 
-namespace Snowair\Think\Dotenv\Filter;
+namespace Snowair\Dotenv;
 
-class DotArray
+class DotArrayFilter
 {
     /**
      * Expands a flat array to a nested array.
