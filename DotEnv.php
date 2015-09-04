@@ -7,9 +7,6 @@
 
 namespace Snowair\Dotenv;
 
-
-use Snowair\Dotenv\Loader;
-
 class DotEnv {
 
     public function app_begin( &$params )
@@ -18,11 +15,22 @@ class DotEnv {
         $env_file = $path.'/.env';
         if (file_exists($env_file)) {
             $Loader = new Loader($env_file);
-            $env = $Loader
-                ->setFilters(['Snowair\Dotenv\DotArrayFilter'])
+            $Loader->setFilters(['Snowair\Dotenv\DotArrayFilter'])
                 ->parse()
-                ->filter()
-                ->toArray();
+                ->filter();
+            if( $expect=C('DOTENV.expect') ){
+                call_user_func_array(array($Loader,'expect'),explode(',',$expect));
+            }
+            if(C('DOTENV.toConst')){
+                $Loader->define();
+            }
+            if(C('DOTENV.toServer')){
+                $Loader->toServer(true);
+            }
+            if(C('DOTENV.toEnv')){
+                $Loader->toEnv(true);
+            }
+            $env = $Loader->toArray();
             C($env);
         };
     }

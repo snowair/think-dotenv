@@ -12,8 +12,6 @@ dotenv 解决一套代码在多处部署时各处代码所用的环境变量及�
 
 2. 本地与线上环境配置肯定不同, 如果直接利用版本库部署代码到线上, 必须防止将本地配置推送到线上.
 
-知名框架 Ruby on Rails 及 Laravel 均集成了来自社区的dotenv组件. think-dotenv 集成的php-dotenv同时也被laravel5集成
-
 
 使用
 --------
@@ -71,6 +69,24 @@ DB_PWD=root         # 本地开发为了方便, 密码一般也很简单
 
 注: windows平台创建以`.`号开头的特殊文件可能需要从编辑器中创建.
 
+### 复杂配置
+
+TP中有些配置的值是数组, 使用 dotenv的配置格式为: `KeyP1.KeyP2.Key...=value`
+
+例如:
+
+```
+"MODULE_ALLOW_LIST"=>array('Home','Admin','Api'),
+```
+
+如果想使用 .env 文件进行配置, 文件内容如下:
+
+```
+MODULE_ALLOW_LIST.0=Home
+MODULE_ALLOW_LIST.1=Admin
+MODULE_ALLOW_LIST.2=Api
+```
+
 更多用法
 --------
 
@@ -79,7 +95,7 @@ DB_PWD=root         # 本地开发为了方便, 密码一般也很简单
 think-dotenv 提供了以下配置对应dotenv提供的其他功能:
 
 ```
- `DOTENV` => array(
+ "DOTENV" => array(
     "toEnv"=>true,              // 是否将 .env导入到 $_ENV 变量, 默认为false
     "toServer"=>true,           // 是否将 .env导入到 $_SERVER 变量, 默认为false
     "toConst"=>true,            // 是否将 .env导入到常量, 默认为false
@@ -88,3 +104,4 @@ think-dotenv 提供了以下配置对应dotenv提供的其他功能:
  ),
 ```
 
+注意: 这些配置必须定义在 Conf/config.php 等配置文件中.
