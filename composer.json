@@ -13,6 +13,6 @@
     "josegonzalez/dotenv": "^1.0"
   },
   "autoload": {
-    "files":[ "DotEnvBehavior.php","DotArrayFilter.php" ]
+    "files":[ "DotEnv.php","DotArrayFilter.php" ]
   }
 }
