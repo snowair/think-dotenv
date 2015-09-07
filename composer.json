@@ -1,7 +1,7 @@
 {
   "name": "snowair/think-dotenv",
   "description": "ThinkPHP3.2集成php-dotenv",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "license": "apache",
   "authors": [
     {
@@ -15,6 +15,7 @@
   "autoload": {
     "psr-4": {
       "Snowair\\Dotenv\\": "."
-    }
+    },
+    "files": ["DotEnv.php"]
   }
 }

@@ -20,19 +20,11 @@ dotenv 解决一套代码在多处部署时各处代码所用的环境变量及�
 composer require snowair/think-dotenv:dev-master
 ```
 
-修改`Common\Conf\tags.php`:
-
-```
-return array(
-    'app_begin'=>array(
-        'Snowair\Dotenv\DotEnv',
-    ),
-);
-```
-
 修改 `.gitignore`, 添加`.env`文件到排除列表
 
-现在你可以在项目根目录(即`APP_PATH`目录)下创建`.env`文件定义独立的环境配置了.
+现在你可以在项目根目录(即`APP_PATH`目录)下创建`.env`文件定义独立的环境配置了! 就是这么简单.
+
+* `.env` 文件的格式见文档: <https://github.com/josegonzalez/php-dotenv>
 
 默认行为
 ------
