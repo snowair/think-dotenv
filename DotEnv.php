@@ -37,5 +37,5 @@ class DotEnv {
 }
 
 if (class_exists( 'Snowair\Think\Behavior\HookAgent' )) {
-    \Snowair\Think\Behavior\HookAgent::add('app_begin','Common\Behavior\DotEnvBehavior');
+    \Snowair\Think\Behavior\HookAgent::add('app_begin','Snowair\\Dotenv\\DotEnv');
 }
