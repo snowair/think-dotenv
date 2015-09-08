@@ -1,7 +1,6 @@
 {
   "name": "snowair/think-dotenv",
   "description": "ThinkPHP3.2集成php-dotenv",
-  "minimum-stability": "stable",
   "license": "apache",
   "authors": [
     {
@@ -11,7 +10,7 @@
   ],
   "require": {
     "josegonzalez/dotenv": "^1.0",
-    "snowair/think-hookagent": "dev-master"
+    "snowair/think-hookagent": ">=0.1"
   },
   "autoload": {
     "psr-4": {
