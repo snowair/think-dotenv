@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "josegonzalez/dotenv": "^1.0"
+    "josegonzalez/dotenv": "^1.0",
+    "snowair/think-hookagent":"dev-master"
   },
   "autoload": {
     "psr-4": {
