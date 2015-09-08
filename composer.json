@@ -1,7 +1,7 @@
 {
   "name": "snowair/think-dotenv",
   "description": "ThinkPHP3.2集成php-dotenv",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "license": "apache",
   "authors": [
     {
