@@ -23,7 +23,9 @@ composer require snowair/think-dotenv:dev-master
 * 在 Common/Conf/tags.php 增加一个行为,如果已经添加过,就不用再添加了:
     ```
     return array(
-         'app_init'=>'Snowair\Think\Behavior\HookAgent',
+         'app_init'=>array(
+            'Snowair\Think\Behavior\HookAgent'
+         ),
     )
     ```
 
