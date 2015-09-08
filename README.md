@@ -20,6 +20,13 @@ dotenv 解决一套代码在多处部署时各处代码所用的环境变量及�
 composer require snowair/think-dotenv:dev-master
 ```
 
+* 在 Common/Conf/tags.php 增加一个行为,如果已经添加过,就不用再添加了:
+    ```
+    return array(
+         'app_init'=>'Snowair\Think\Behavior\HookAgent',
+    )
+    ```
+
 修改 `.gitignore`, 添加`.env`文件到排除列表
 
 现在你可以在项目根目录(即`APP_PATH`目录)下创建`.env`文件定义独立的环境配置了! 就是这么简单.
