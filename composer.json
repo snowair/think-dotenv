@@ -10,7 +10,7 @@
   ],
   "require": {
     "josegonzalez/dotenv": "^1.0",
-    "snowair/think-hookagent": ">=0.1"
+    "snowair/think-hookagent": ">=0.4"
   },
   "autoload": {
     "psr-4": {
