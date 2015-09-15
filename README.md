@@ -3,6 +3,8 @@
 
 > ThinkPHP 3.2 集成 [php-dotenv](https://github.com/josegonzalez/php-dotenv)
 
+[composer中文文档](http://www.kancloud.cn/thinkphp/composer)
+
 dotenv简介
 ---------
 
